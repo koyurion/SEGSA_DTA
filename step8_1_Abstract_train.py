@@ -19,9 +19,9 @@ max_pocket_len = 54
 max_atom_num = 48
 max_bond_num = 53
 # Package
-import mnist_1107_fixedLoss_ThreeTask
-from mnist_1107_fixedLoss_ThreeTask import MultitaskMnistLoss
-from step71_model import Fingerprint, Masked_BCELoss, Masked_MSELoss
+import fixedLoss_ThreeTask
+from fixedLoss_ThreeTask import MultitaskMnistLoss
+from step7_1_model import Fingerprint, Masked_BCELoss, Masked_MSELoss
 
 # Path_input
 prex_input_path = "../"
