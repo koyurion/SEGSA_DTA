@@ -41,7 +41,7 @@ np.random.seed(SEED)  # when using pandas/numpy
 
 from step8_1_Abstract_train import Fingerprint, Masked_BCELoss, Masked_MSELoss
 from step8_1_Abstract_train import Gflag, task_flag, cur_t, hyper_flag
-from step8_1_Abstract_train import mnist_1107_fixedLoss_ThreeTask, MultitaskMnistLoss
+from step8_1_Abstract_train import fixedLoss_ThreeTask, MultitaskMnistLoss
 from utils import load_data, get_GCN_protein_data, get_GCN_ligand_data, get_GCN_InterOut_data
 from utils import return_GCN_ligand_featuredim, return_GCN_protein_featuredim
 
@@ -301,11 +301,11 @@ enabled_tasks = (True, True, True)
 
 
 def _get_fixed_loss_func(enabled_tasks: [bool], weights: [float], mnist_type: str):
-    return mnist_1107_fixedLoss_ThreeTask.get_fixed_loss(enabled_tasks, weights, mnist_type)
+    return fixedLoss_ThreeTask.get_fixed_loss(enabled_tasks, weights, mnist_type)
 
 
 def _get_learned_loss_func(enabled_tasks: [bool], model: Fingerprint, mnist_type: str):
-    return mnist_1107_fixedLoss_ThreeTask.get_learned_loss(enabled_tasks, model.get_loss_weights(), mnist_type)
+    return fixedLoss_ThreeTask.get_learned_loss(enabled_tasks, model.get_loss_weights(), mnist_type)
 
 
 def _get_loss_func(model: Fingerprint, loss_type="learned", weights=0) -> MultitaskMnistLoss:
