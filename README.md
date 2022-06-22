@@ -1,4 +1,4 @@
-# MSA_DTA
+# SEGSA_DTA
 The model_state of the best model is available in ```./train_output/```.
 
 The datasets described in this paper can be found in ```./datasets/```.
